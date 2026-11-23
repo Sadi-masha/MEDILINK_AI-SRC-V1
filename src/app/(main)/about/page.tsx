@@ -112,13 +112,13 @@ export default function AboutPage() {
 
         {/* 2x2 Responsive Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
-          {/* ── CARD 1: Sayma Chowdhury Dina (Mentor) ── */}
+          {/* ── CARD 1: Sayma Islam Chowdhury (Mentor) ── */}
           <div className="group bg-white border border-border-soft hover:border-brand/40 rounded-[28px] p-7 md:p-8 shadow-sm hover:shadow-[0_20px_45px_rgba(23,120,111,0.14)] transition-all duration-400 flex flex-col justify-between overflow-hidden relative">
             <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
               <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 shadow-md border-2 border-brand/20">
                 <Image
                   src="/assets/team/mentor.jpeg"
-                  alt="Sayma Chowdhury Dina"
+                  alt="Sayma Islam Chowdhury"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-108"
                 />
@@ -129,7 +129,7 @@ export default function AboutPage() {
                   <GraduationCap className="w-3.5 h-3.5" /> Mentor
                 </span>
                 <h3 className="font-heading font-extrabold text-[22px] md:text-[24px] text-text-primary mb-2">
-                  Sayma Chowdhury Dina
+                  Sayma Islam Chowdhury
                 </h3>
                 <p className="font-sans text-[14px] text-text-muted leading-relaxed mb-4">
                   Distinguished mentor providing strategic guidance, research mentorship, and technical direction to empower MediLink's healthcare mission across Bangladesh.
