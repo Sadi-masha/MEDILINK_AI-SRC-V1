@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { MessageSquare, Pill, Siren, Heart, Code, Palette, Sparkles } from "lucide-react";
+import { MessageSquare, Pill, Siren, Heart, Code, Palette, Sparkles, GraduationCap } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -95,7 +95,7 @@ export default function AboutPage() {
       </div>
 
       {/* ═══════════════════════════════════════════════
-          OUR TEAM — UNCOMMON EDITORIAL BENTO GRID
+          OUR TEAM — EDITORIAL BENTO GRID
           ═══════════════════════════════════════════════ */}
       <div id="team-section" className="pt-6">
         <div className="text-center mb-12">
@@ -106,16 +106,51 @@ export default function AboutPage() {
             Meet the Team
           </h2>
           <p className="font-sans text-[16px] text-text-muted max-w-md mx-auto mt-2">
-            The visionary engineers and designers behind MediLink AI.
+            The visionary mentors, engineers, and designers behind MediLink AI.
           </p>
         </div>
 
-        {/* Uncommon Asymmetrical Editorial Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-7">
-          {/* ── CARD 1: Washik Jahan Yafi (Founder) — Prominent 7-col hero card ── */}
-          <div className="lg:col-span-7 group bg-white border border-border-soft hover:border-brand/40 rounded-[28px] p-7 md:p-8 shadow-sm hover:shadow-[0_20px_45px_rgba(23,120,111,0.14)] transition-all duration-400 flex flex-col justify-between overflow-hidden relative">
+        {/* 2x2 Responsive Team Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+          {/* ── CARD 1: Sayma Chowdhury Dina (Mentor) ── */}
+          <div className="group bg-white border border-border-soft hover:border-brand/40 rounded-[28px] p-7 md:p-8 shadow-sm hover:shadow-[0_20px_45px_rgba(23,120,111,0.14)] transition-all duration-400 flex flex-col justify-between overflow-hidden relative">
             <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
-              <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden shrink-0 shadow-md border-2 border-brand/20">
+              <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 shadow-md border-2 border-brand/20">
+                <Image
+                  src="/assets/team/mentor.jpeg"
+                  alt="Sayma Chowdhury Dina"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-108"
+                />
+              </div>
+
+              <div className="flex-1 text-center sm:text-left">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand font-sans text-[12px] font-bold tracking-wider uppercase mb-3 shadow-xs">
+                  <GraduationCap className="w-3.5 h-3.5" /> Mentor
+                </span>
+                <h3 className="font-heading font-extrabold text-[22px] md:text-[24px] text-text-primary mb-2">
+                  Sayma Chowdhury Dina
+                </h3>
+                <p className="font-sans text-[14px] text-text-muted leading-relaxed mb-4">
+                  Distinguished mentor providing strategic guidance, research mentorship, and technical direction to empower MediLink's healthcare mission across Bangladesh.
+                </p>
+                <div className="flex gap-2 flex-wrap justify-center sm:justify-start">
+                  <span className="px-2.5 py-1 bg-bg-soft rounded-lg text-brand font-semibold text-[11px]">Project Mentorship</span>
+                  <span className="px-2.5 py-1 bg-bg-soft rounded-lg text-brand font-semibold text-[11px]">Academic & Tech Guidance</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-t border-brand/10 pt-4 mt-6 flex justify-between items-center text-[12px] text-text-muted">
+              <span>Sylhet Robotics Club</span>
+              <span className="text-brand font-semibold">Advisory & Mentorship</span>
+            </div>
+          </div>
+
+          {/* ── CARD 2: Washik Jahan Yafi (Founder & Lead) ── */}
+          <div className="group bg-white border border-border-soft hover:border-brand/40 rounded-[28px] p-7 md:p-8 shadow-sm hover:shadow-[0_20px_45px_rgba(23,120,111,0.14)] transition-all duration-400 flex flex-col justify-between overflow-hidden relative">
+            <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+              <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 shadow-md border-2 border-brand/20">
                 <Image
                   src="/assets/team/yafi.jpeg"
                   alt="Washik Jahan Yafi"
@@ -128,7 +163,7 @@ export default function AboutPage() {
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand text-white font-sans text-[12px] font-bold tracking-wider uppercase mb-3 shadow-xs">
                   ★ Founder & Lead
                 </span>
-                <h3 className="font-heading font-extrabold text-[24px] text-text-primary mb-2">
+                <h3 className="font-heading font-extrabold text-[22px] md:text-[24px] text-text-primary mb-2">
                   Washik Jahan Yafi
                 </h3>
                 <p className="font-sans text-[14px] text-text-muted leading-relaxed mb-4">
@@ -147,11 +182,10 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* ── Right Column: Stacked Cards for Developer & Designer (5 cols) ── */}
-          <div className="lg:col-span-5 flex flex-col gap-7">
-            {/* ── CARD 2: Sadi Mohammad (Web Developer) ── */}
-            <div className="group bg-white border border-border-soft hover:border-brand/40 rounded-[28px] p-6 shadow-sm hover:shadow-[0_16px_36px_rgba(23,120,111,0.12)] transition-all duration-400 flex items-center gap-5">
-              <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden shrink-0 shadow-md border-2 border-brand/20">
+          {/* ── CARD 3: Sadi Mohammad (Web Developer) ── */}
+          <div className="group bg-white border border-border-soft hover:border-brand/40 rounded-[28px] p-7 md:p-8 shadow-sm hover:shadow-[0_20px_45px_rgba(23,120,111,0.14)] transition-all duration-400 flex flex-col justify-between overflow-hidden relative">
+            <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+              <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 shadow-md border-2 border-brand/20">
                 <Image
                   src="/assets/team/sadi.jpg"
                   alt="Sadi Mohammad"
@@ -160,23 +194,33 @@ export default function AboutPage() {
                 />
               </div>
 
-              <div className="flex-1 min-w-0">
-                <span className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-brand bg-brand/10 px-2.5 py-0.5 rounded-full mb-1.5">
-                  <Code className="w-3 h-3" />
-                  Web Developer
+              <div className="flex-1 text-center sm:text-left">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand/10 text-brand font-sans text-[12px] font-bold tracking-wider uppercase mb-3 shadow-xs">
+                  <Code className="w-3.5 h-3.5" /> Web Developer
                 </span>
-                <h3 className="font-heading font-bold text-[19px] text-text-primary truncate">
+                <h3 className="font-heading font-extrabold text-[22px] md:text-[24px] text-text-primary mb-2">
                   Sadi Mohammad
                 </h3>
-                <p className="font-sans text-[13px] text-text-muted leading-relaxed mt-1 line-clamp-2">
+                <p className="font-sans text-[14px] text-text-muted leading-relaxed mb-4">
                   Full-stack Next.js engineer architecting the dual-layer AI fallback, WebGL DNA visualizer, and streaming infrastructure.
                 </p>
+                <div className="flex gap-2 flex-wrap justify-center sm:justify-start">
+                  <span className="px-2.5 py-1 bg-bg-soft rounded-lg text-brand font-semibold text-[11px]">Full-Stack Next.js</span>
+                  <span className="px-2.5 py-1 bg-bg-soft rounded-lg text-brand font-semibold text-[11px]">AI Systems</span>
+                </div>
               </div>
             </div>
 
-            {/* ── CARD 3: Mohammad Isaba Islam (Lead Designer) ── */}
-            <div className="group bg-white border border-border-soft hover:border-brand/40 rounded-[28px] p-6 shadow-sm hover:shadow-[0_16px_36px_rgba(23,120,111,0.12)] transition-all duration-400 flex items-center gap-5">
-              <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden shrink-0 shadow-md border-2 border-brand/20">
+            <div className="border-t border-brand/10 pt-4 mt-6 flex justify-between items-center text-[12px] text-text-muted">
+              <span>Sylhet Robotics Club</span>
+              <span className="text-brand font-semibold">Engineering</span>
+            </div>
+          </div>
+
+          {/* ── CARD 4: Mohammad Isaba Islam (Lead Designer) ── */}
+          <div className="group bg-white border border-border-soft hover:border-brand/40 rounded-[28px] p-7 md:p-8 shadow-sm hover:shadow-[0_20px_45px_rgba(23,120,111,0.14)] transition-all duration-400 flex flex-col justify-between overflow-hidden relative">
+            <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+              <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 shadow-md border-2 border-brand/20">
                 <Image
                   src="/assets/team/isaba.jpeg"
                   alt="Mohammad Isaba Islam"
@@ -185,18 +229,26 @@ export default function AboutPage() {
                 />
               </div>
 
-              <div className="flex-1 min-w-0">
-                <span className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-brand bg-brand/10 px-2.5 py-0.5 rounded-full mb-1.5">
-                  <Palette className="w-3 h-3" />
-                  Lead Designer
+              <div className="flex-1 text-center sm:text-left">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand/10 text-brand font-sans text-[12px] font-bold tracking-wider uppercase mb-3 shadow-xs">
+                  <Palette className="w-3.5 h-3.5" /> Lead Designer
                 </span>
-                <h3 className="font-heading font-bold text-[19px] text-text-primary truncate">
+                <h3 className="font-heading font-extrabold text-[22px] md:text-[24px] text-text-primary mb-2">
                   Mohammad Isaba Islam
                 </h3>
-                <p className="font-sans text-[13px] text-text-muted leading-relaxed mt-1 line-clamp-2">
+                <p className="font-sans text-[14px] text-text-muted leading-relaxed mb-4">
                   UI/UX visionary designing accessible glassmorphism, responsive components, and intuitive patient journeys.
                 </p>
+                <div className="flex gap-2 flex-wrap justify-center sm:justify-start">
+                  <span className="px-2.5 py-1 bg-bg-soft rounded-lg text-brand font-semibold text-[11px]">UI/UX Design</span>
+                  <span className="px-2.5 py-1 bg-bg-soft rounded-lg text-brand font-semibold text-[11px]">Design Systems</span>
+                </div>
               </div>
+            </div>
+
+            <div className="border-t border-brand/10 pt-4 mt-6 flex justify-between items-center text-[12px] text-text-muted">
+              <span>Sylhet Robotics Club</span>
+              <span className="text-brand font-semibold">Product Design</span>
             </div>
           </div>
         </div>
